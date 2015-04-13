@@ -440,5 +440,9 @@
 
 (provide client% simple-client% make-client)
 
-(define c (new client%))
-(send c load-token)
+(module+ main
+  (define c (new client%))
+  (send c load-token))
+
+(module+ test
+  (define c (new simple-client%)))

@@ -2,6 +2,9 @@
 
 (require "main.rkt" racket/class)
 
+;; skip gui tests if they're not available
+(module* test racket/base)
+
 (define (system-position-ok-before-cancel?)
   (eq? (system-type) 'windows))
 

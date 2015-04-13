@@ -8,6 +8,9 @@
          "main.rkt" "gui.rkt")
 (provide tool@)
 
+;; skip gui tests if they're not available
+(module* test racket/base)
+
 (define-runtime-path github-logo "GitHub-Mark-16px.png")
  
 (define tool@
